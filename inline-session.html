@@ -233,6 +233,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
           if (session.isImmersive) {
             xrImmersiveRefSpace = refSpace;
 
+            if(arStarted)
             xrImmersiveRefSpace.addEventListener('reset', (evt) => {
               if (evt.transform) {
                 // AR experiences typically should stay grounded to the real world.
