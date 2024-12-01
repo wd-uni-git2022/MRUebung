@@ -183,6 +183,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
         if(session.isImmersive && arStarted){
           skybox.visible = false;
+        }else{
+          skybox.visible = true;
         }
 
         if (!gl) {
@@ -253,6 +255,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         // Only reset the button when the immersive session ends.
         if (event.session.isImmersive) {
           xrButton.setSession(null);
+          arButton.setSession(null);
           skybox.visible = true;
         }
       }
